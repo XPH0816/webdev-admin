@@ -2,21 +2,21 @@
   <div class="interface">
     <div class="values">
       <div class="val-box">
-        <i class="bx bx-train"></i>
+        <i class="bx bx-chat"></i>
         <div>
           <h3>2,000</h3>
           <span>Total Feedbacks</span>
         </div>
       </div>
       <div class="val-box">
-        <i class="bx bx-check"></i>
+        <i class="bx bx-conversation"></i>
         <div>
           <h3>1,588</h3>
           <span>Active Feedbacks</span>
         </div>
       </div>
       <div class="val-box">
-        <i class="bx bxs-train"></i>
+        <i class="bx bx-comment-dots"></i>
         <div>
           <h3>200</h3>
           <span>New Feedbacks</span>
@@ -24,7 +24,7 @@
       </div>
       <!-- Add New User Button -->
       <button class="val-box" @click="$emit('openAddFeedbackPopup')" style="margin: 0%">
-        <i class="bx bx-plus"></i>
+        <i class="bx bx-message-add"></i>
         <div>
           <h3>New Feedback</h3>
         </div>
