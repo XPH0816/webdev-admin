@@ -1,34 +1,34 @@
 <script setup>
-import { onMounted } from "vue";
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { onMounted } from 'vue'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const username = ref("");
-const password = ref("");
-const rememberMe = ref(false);
-const errorMessage = ref("");
+const username = ref('')
+const password = ref('')
+const rememberMe = ref(false)
+const errorMessage = ref('')
 
-const router = useRouter();
+const router = useRouter()
 
 function login() {
   // Example login logic
-  if (username.value === "admin" && password.value === "password") {
-    errorMessage.value = "";
-    alert("Login successful!");
-    document.getElementById("interface").style = "";
-    router.push("/user");
+  if (username.value === 'admin' && password.value === 'password') {
+    errorMessage.value = ''
+    alert('Login successful!')
+    document.getElementById('interface').style = ''
+    router.push('/user')
   } else {
-    errorMessage.value = "Invalid username or password!";
+    errorMessage.value = 'Invalid username or password!'
   }
 }
 
 function forgotPassword() {
-  alert("Forgot Password clicked!");
+  alert('Forgot Password clicked!')
   // Here you can handle the forgot password logic (e.g., show a modal or redirect to a recovery page)
 }
 
 onMounted(() => {
-  document.getElementById("interface").style.marginLeft = "0";
+  document.getElementById('interface').style.marginLeft = '0'
 })
 </script>
 
@@ -38,11 +38,23 @@ onMounted(() => {
       <h1>Admin Login</h1>
       <form @submit.prevent="login">
         <div class="input-group">
-          <input v-model="username" type="text" id="username" placeholder="Enter your username" required />
-          <span class='bx bx-user icon'></span>
+          <input
+            v-model="username"
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+          <span class="bx bx-user icon"></span>
         </div>
         <div class="input-group">
-          <input v-model="password" type="password" id="password" placeholder="Enter your password" required />
+          <input
+            v-model="password"
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
           <span class="bx bx-key icon"></span>
         </div>
         <div class="remember-me">
@@ -59,7 +71,7 @@ onMounted(() => {
 
 <style scoped>
 * {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
 }
 
 .app-container {
